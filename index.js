@@ -67,37 +67,6 @@ app.post("/api/members/", (req,res) =>{
 
 
 
-//put
-//update crud
-app.use(express.urlencoded({extended:false}))
-app.put("/api/members/", (req,res) =>{
-    const fname= req.body.fname //juana
-    const lname = req.body.lname//delacruza
-    const email = req.body.email//juana.gmail.com
-    const gender = req.body.gender// male
-    const id = req.body.id;
-
-    connection.query(`UPDATE userdata SET first_name='${fname}', last_name='${lname}',email ='${email}', gender= '${gender}' WHERE id ='${id})'` , (err,rows,fields) =>{
-        if(err) throw err
-        res.json({msg: `Successfully updated`})
-    })
-
-})
-
-//delete
-app.use(express.urlencoded({extended: false}))
-app.delete("/api/members/", (req,res) =>{
-    const id=req.body.id;
-    connection.query(`DELETE FROM userdata WHERE id='${id}'`, (err,rows,fields) =>{
-        if(err) throw err;
-        res.json({msg:`Successfully deleted`})
-    })
-})
-
-
-
-
-
 
 app.listen(5000,() => {
     console.log(`Server is running in port ${PORT}`);
