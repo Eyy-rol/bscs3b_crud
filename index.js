@@ -3,7 +3,7 @@ const express = require("express")
 const app = express()
 
 const mysql = require("mysql")
-const PORT = process.env.PORT || 6000
+const PORT = process.env.PORT || 3306
 const moment=require("moment")
 
 
@@ -16,10 +16,10 @@ const logger =(req, res, next) =>{
 
 app.use(logger);
 const connection = mysql.createConnection({
-    host: "bbluunuloghcbjubsief-mysql.services.clever-cloud.com",
-    user: "uwxbfy5rimfehlrt",
-    password: "iDNm7fiYkB5RyN6ypJks",
-    database: "bbluunuloghcbjubsief",
+    host: "bhptyl6fudeqastshrmf-mysql.services.clever-cloud.com",
+    user: "uuayu6uatt9hoxvp",
+    password: "QVL0AtY3zuVbt2EzGGn1",
+    database: "bhptyl6fudeqastshrmf",
 });
 
 connection.connect();
