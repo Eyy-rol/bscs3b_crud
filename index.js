@@ -59,11 +59,11 @@ app.post("/api/members/", (req,res) =>{
     const email = req.body.email//juan.gmail.com
     const gender = req.body.gender//gay
 
-    connection.query(`INSERT INTO userdata (first_name, last_name, email, gender)VALUES ('${fname}', '${lname}','${email}', '${gender}' )`,(err,rows,fields) =>{
-        if(err) throw err;
-        res.json({msg: `Successfully inserted`})
-    })
-})
+    //connection.query(`INSERT INTO userdata (first_name, last_name, email, gender)VALUES ('${fname}', '${lname}','${email}', '${gender}' )`,(err,rows,fields) =>{
+       // if(err) throw err;
+       // res.json({msg: `Successfully inserted`})
+  //  })
+//})
 
 
 
