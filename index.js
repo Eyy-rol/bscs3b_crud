@@ -5,6 +5,7 @@ const app = express()
 const mysql = require("mysql")
 const PORT = process.env.PORT || 3306
 const moment=require("moment")
+const cors = require ("cors")
 
 
 const logger =(req, res, next) =>{
